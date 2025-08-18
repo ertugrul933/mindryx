@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title id="aTitle">Mindryx — Yazı</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="public/styles.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="/">Mindryx</a>
+    <div class="actions"><button id="themeToggle" class="btn icon" title="Tema">🌙</button></div>
+  </div>
+</header>
+
+<main class="container article-layout">
+  <article class="article" id="articleBody">
+    <h1>Yükleniyor…</h1>
+  </article>
+  <aside class="toc" id="toc"></aside>
+</main>
+
+<footer class="site-footer">
+  <div class="container foot">
+    <div>© <span id="year"></span> Mindryx</div>
+  </div>
+</footer>
+
+<script type="module">
+  import {setupCommon, loadJSON, md} from 'public/script.js';
+  setupCommon();
+
+  const p = new URLSearchParams(location.search);
+  const slug = p.get('p');
+  const data = await loadJSON('public/content/articles.json');
+  const post = data.articles.find(a => a.slug===slug) || data.articles[0];
+
+  document.title = post.title + ' — Mindryx';
+  document.querySelector('#year').textContent = new Date().getFullYear();
+
+  const body = document.querySelector('#articleBody');
+  body.innerHTML = `<h1>${post.title}</h1><p class="muted">${post.date} • ${post.category}</p>${md(post.body||'')}`;
+
+  // TOC
+  const toc = document.querySelector('#toc');
+  const heads = body.querySelectorAll('h2, h3');
+  toc.innerHTML = '<div class="side-title">İçindekiler</div>';
+  heads.forEach(h=>{
+    const id = h.textContent.toLowerCase().replace(/\s+/g,'-').replace(/[^\w-]/g,'');
+    h.id = id;
+    const a = document.createElement('a');
+    a.href = '#'+id; a.textContent = h.textContent; a.className = 'toc-link';
+    toc.appendChild(a);
+  });
+</script>
+</body>
+</html>

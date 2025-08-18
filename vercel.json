@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/admin", "methods": ["GET"], "dest": "/api/protect.js" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}

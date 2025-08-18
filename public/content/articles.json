@@ -1,0 +1,18 @@
+[
+  {
+    "id": "a-001",
+    "title": "Zentree-level Landing in 2 hours",
+    "slug": "zentree-level-landing",
+    "date": "2025-01-20",
+    "categoryId": "news",
+    "cover": "/assets/cover1.jpg",
+    "excerpt": "How we cloned a premium landing in hours.",
+    "body": "## Intro\nMarkdown…",
+    "status": "published",           
+    "tags": ["landing", "webflow"],
+    "featured": true,
+    "readingTime": 4,
+    "authorId": "e1",
+    "seo": { "title": "", "description": "", "ogImage": "" }
+  }
+]

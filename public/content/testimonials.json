@@ -1,0 +1,12 @@
+[
+  {"id":"t1",
+  "name":"Aylin K.",
+  "role":"Founder",
+  "avatar":"/assets/u1.jpg",
+  "quote":"Mindryx hız kazandırdı!"},
+  {"id":"t2",
+  "name":"Mert O.",
+  "role":"PM",
+  "avatar":"/assets/u2.jpg",
+  "quote":"Panel inanılmaz pratik."}
+]

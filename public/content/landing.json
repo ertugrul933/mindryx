@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "tagline": "Beautiful & fast knowledge tools.",
+    "cta": "Get Started",
+    "href": "/get-started",
+    "image": "/assets/hero.png",
+    "title": "Manage Your Work. <span class=\"grad\">No Overwhelm.</span>",
+    "subtitle": "Stay focused and productive with a simple, modern workspace for you and your team.",
+    "primaryCtaText": "Get Started Free",
+    "primaryCtaHref": "#",
+    "secondaryCtaText": "Watch Demo",
+    "secondaryCtaHref": "#"
+  },
+  "features": [
+    {"title": "Speed", "text": "Ship in hours.", "icon": "rocket"},
+    {"title": "Design", "text": "Premium look.", "icon": "diamond"}
+  ],
+  "solutions": {
+    "title": "Solutions for Teams of Any Size",
+    "image": "https://dummyimage.com/500x300/22d3ee/ffffff&text=Team+Dashboard",
+    "heading": "Scale Easily",
+    "text": "From freelancers to enterprises, our platform adapts to your needs.",
+    "ctaText": "Try Now",
+    "ctaHref": "#"
+  },
+  "pricing": [
+    {
+      "name": "Free",
+      "price": "0",
+      "period": "/mo",
+      "bullets": ["Basic tools for individuals"],
+      "ctaText": "Get Started",
+      "ctaHref": "#",
+      "highlight": false
+    },
+    {
+      "name": "Pro",
+      "price": "12",
+      "period": "/mo",
+      "bullets": ["Advanced tools for teams"],
+      "ctaText": "Start Trial",
+      "ctaHref": "#",
+      "highlight": true
+    },
+    {
+      "name": "Enterprise",
+      "price": "Custom",
+      "period": "",
+      "bullets": ["Tailored solutions for large orgs"],
+      "ctaText": "Contact Us",
+      "ctaHref": "#",
+      "highlight": false
+    }
+  ],
+  "faqs": [
+    { "q": "Is there a free trial?", "a": "Yes, you can try all Pro features free for 14 days." },
+    { "q": "Can I cancel anytime?", "a": "Absolutely. There are no long-term contracts." },
+    { "q": "Do you offer discounts?", "a": "Yes, annual plans come with a 20% discount." }
+  ]
+  
+  
+}

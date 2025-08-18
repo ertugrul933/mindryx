@@ -1,0 +1,22 @@
+[
+  {
+    "id": "basic",
+    "title": "Basic",
+    "price": "19",
+    "period": "mo",
+    "badge": "",
+    "features": ["1 project", "Basic support"],
+    "ctaLabel": "Start",
+    "ctaHref": "/checkout?plan=basic"
+  },
+  {
+    "id": "pro",
+    "title": "Pro",
+    "price": "49",
+    "period": "mo",
+    "badge": "Popular",
+    "features": ["5 projects", "Priority support"],
+    "ctaLabel": "Try Pro",
+    "ctaHref": "/checkout?plan=pro"
+  }
+]

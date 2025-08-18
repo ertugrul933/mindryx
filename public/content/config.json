@@ -1,0 +1,71 @@
+{
+  "site": {
+    "name": "Mindryx",
+    "tagline": "Fast AI Knowledge Hub",
+    "logo": "/assets/logo.svg",
+    "favicon": "/assets/favicon.png",
+    "email": "hello@mindryx.org",
+    "phone": "+90 555 555 55 55",
+    "address": "İstanbul, Türkiye"
+  },
+  "theme": {
+    "primary": "#6d5ef7",
+    "secondary": "#22d3ee",
+    "fontHead": "Inter",
+    "fontBody": "Inter",
+    "layout": "full",                
+    "header": { "sticky": true, "transparent": false },
+    "darkMode": false
+  },
+  "menu": [
+    {"label": "Features", "href": "/#features", "target": "_self"},
+    {"label": "Solutions", "href": "/#solutions", "target": "_self"},
+    {"label": "Pricing", "href": "/pricing", "target": "_self"},
+    {"label": "FAQ", "href": "/#faq", "target": "_self"}
+  ],
+  "footer": {
+    "columns": [
+      {
+        "title": "Product",
+        "links": [
+          {"label": "Overview", "href": "/"},
+          {"label": "Changelog", "href": "/changelog"}
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {"label": "About", "href": "/about"},
+          {"label": "Contact", "href": "/contact"}
+        ]
+      }
+    ],
+    "social": [
+      {"icon": "twitter", "href": "https://x.com/…"},
+      {"icon": "linkedin", "href": "https://linkedin.com/…"},
+      {"icon": "github", "href": "https://github.com/…"}
+    ],
+    "copyright": "© 2025 Mindryx. All rights reserved."
+  },
+  "seo": {
+    "titleTemplate": "%s — Mindryx",
+    "metaDescription": "AI powered knowledge hub.",
+    "ogImage": "/assets/og-default.jpg",
+    "canonicalBase": "https://www.mindryx.org"
+  },
+  "analytics": {
+    "ga4": "",
+    "gtm": "",
+    "pixel": ""
+  },
+  "i18n": {
+    "enabled": false,
+    "default": "tr",
+    "locales": ["tr", "en"]
+  }
+
+  
+
+
+
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mindryx Admin</title>
+  <link rel="stylesheet" href="public/styles.css" />
+  <style>
+    /* admin'e küçük eklemeler */
+    .admin-nav{display:flex;gap:.5rem;flex-wrap:wrap;margin:16px 0}
+    .admin-nav button{padding:8px 12px;border:1px solid var(--muted);border-radius:10px;background:#fff;cursor:pointer}
+    .admin-nav button.active{background:var(--brand1);color:#fff;border-color:var(--brand1)}
+    .admin-grid{display:grid;grid-template-columns:1fr 420px;gap:16px}
+    .card{background:#fff;border:1px solid #eee;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+    .card h3{margin:0;padding:14px 16px;border-bottom:1px solid #f0f0f0}
+    .card .body{padding:16px;display:flex;flex-direction:column;gap:12px}
+    .row{display:flex;gap:10px;align-items:center}
+    .row input[type=text], .row input[type=url], textarea, select{
+      width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:10px}
+    .rows{display:flex;flex-direction:column;gap:10px}
+    .list{display:flex;flex-direction:column;gap:8px}
+    .item{border:1px dashed #e5e7eb;padding:10px;border-radius:10px;background:#fcfcfc}
+    .actions{display:flex;gap:8px;flex-wrap:wrap}
+    .badge{font:12px/1.6 ui-sans-serif,system-ui;padding:2px 8px;border-radius:999px;background:#f3f4f6}
+    .muted{opacity:.7}
+    .success{color:#059669}
+    .danger{color:#dc2626}
+    .toolbar{display:flex;gap:8px;align-items:center;justify-content:flex-end}
+    .toolbar .btn{padding:10px 14px;border-radius:10px;border:1px solid #e5e7eb;background:#fff;cursor:pointer}
+    .toolbar .btn.primary{background:var(--brand1);border-color:var(--brand1);color:#fff}
+    .mini{font-size:12px}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .pre{white-space:pre-wrap;background:#0b1022;color:#eaf2ff;border-radius:12px;padding:10px;font:12px/1.5 ui-monospace}
+    .thumb {margin-top:6px}
+    .thumb img{max-width:220px;max-height:120px;border:1px solid #e5e7eb;border-radius:8px;display:block}
+    .row .btn.mini{font-size:12px;padding:6px 8px}
+  </style>
+</head>
+<body class="container">
+  <h1>Admin Panel</h1>
+  <div class="muted mini">Prod’da <b>/admin</b> kullanıcı-şifre ile korunur. Live Server’da doğrudan <b>admin.html</b> açılır.</div>
+  <div id="status" class="muted mini"></div>
+  <div class="admin-nav">
+    <button data-tab="config">Site Ayarları</button>
+    <button data-tab="menu">Menü</button>
+    <button data-tab="footer">Footer</button>
+    <button data-tab="seo">SEO</button>
+    <button data-tab="analytics">Analytics</button>
+    <button data-tab="categories">Kategoriler</button>
+    <button data-tab="authors">Yazarlar</button>
+    <button data-tab="articles">Yazılar</button>
+    <button data-tab="landing">Landing</button>
+    <button data-tab="pricing">Pricing</button>
+    <button data-tab="testimonials">Testimonials</button>
+    <button data-tab="faq">FAQ</button>
+    <button data-tab="media">Görseller</button>
+    <button data-tab="tools">Araçlar</button>
+  </div>
+
+  <div class="admin-grid">
+    <div class="card">
+      <h3 id="section-title">Site Ayarları</h3>
+      <div class="body" id="editor"></div>
+    </div>
+
+    <div class="card">
+      <h3>Yayın / İşlemler</h3>
+
+      <input id="commitMessage" class="input" placeholder="Commit mesajı (örn. Panel: güncelleme)">
+
+      <div class="row">
+        <button id="format" class="btn">Biçimlendir</button>
+        <button id="download" class="btn">JSON'u indir (lokal)</button>
+        <button id="publish" class="btn primary">Yayınla (GitHub)</button>
+      </div>
+
+      <details>
+        <summary>Ham JSON (okunan)</summary>
+        <pre id="debug"></pre>
+      </details>
+    </div>
+  </div>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
